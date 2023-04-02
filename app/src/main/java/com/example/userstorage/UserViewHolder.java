@@ -9,12 +9,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class UserViewHolder extends RecyclerView.ViewHolder {
     ImageView imageView;
-    TextView txtUserName, txtEmail, txtDegreeProgram;
+    TextView txtUserName, txtEmail, txtDegreeProgram, txtCompletedProgramsList;
 
     public UserViewHolder(@NonNull View itemView) {
         super(itemView);
         txtUserName = itemView.findViewById(R.id.txtUserName);
         txtEmail = itemView.findViewById(R.id.txtEmail);
         txtDegreeProgram = itemView.findViewById(R.id.txtDegreeProgram);
+        txtCompletedProgramsList = itemView.findViewById(R.id.txtCompletedProgramsList);
     }
 }

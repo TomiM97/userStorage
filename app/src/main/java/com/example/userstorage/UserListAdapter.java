@@ -29,6 +29,15 @@ public class UserListAdapter extends RecyclerView.Adapter<UserViewHolder> {
         holder.txtUserName.setText(users.get(position).getFirstName() +" "+ users.get(position).getLastName());
         holder.txtEmail.setText(users.get(position).getEmail());
         holder.txtDegreeProgram.setText(users.get(position).getDegreeProgram());
+        if(users.get(position).getCompletedPrograms().size() != 0) {
+            String txtCompletedPrograms = "Suoritetut tutkinnot:\n";
+            for (int i = 0; i < users.get(position).getCompletedPrograms().size(); i++) {
+                txtCompletedPrograms = txtCompletedPrograms.concat(users.get(position).getCompletedPrograms().get(i) + "\n");
+            }
+            holder.txtCompletedProgramsList.setText(txtCompletedPrograms);
+        } else {
+            holder.txtCompletedProgramsList.setText("Ei vielä suoritettuja tutkintoja");
+        }
     }
 
     @Override
